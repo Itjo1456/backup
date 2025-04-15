@@ -1,0 +1,21 @@
+<resources>
+
+    <string name="title_appbar_home">원밀리언페이</string>
+    <string name="title_appbar_transfer_screen">누구에게 보낼까요</string>
+    <string name="label_home">홈</string>
+    <string name="label_transfer">송금</string>
+    <string name="description_add_card">카드 추가를 안내하는 이미지</string>
+    <string name="text_transfer_check">결제 수단을 확인해주세요</string>
+    <string name="title_appbaer_register_payment_method">결제 수단 등록</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="description_account_transfer_image">송금할 계좌의 프로필 이미지</string>
+    <string name="label_card_num">카드번호</string>
+    <string name="hint_card_number">Card number</string>
+    <string name="label_expired_date">유효기간</string>
+    <string name="hint_expired_date">MM/YY</string>
+    <string name="label_password">비밀번호 2자리</string>
+    <string name="hint_input_password">...</string>
+    <string name="label_card_name">카드명</string>
+    <string name="hint_input_card_name">카드 이름 입력</string>
+</resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_graph"
+    app:startDestination="@id/navigation_homeFragment">
+
+    <fragment
+        android:id="@+id/navigation_homeFragment"
+        android:name="com.example.payapp.HomeFragment"
+        android:label="@string/label_home"
+        tools:layout="@layout/fragment_home">
+        <!--android:label="@string/label_home" / 그냥 사용자가 읽을 수 있는 값 -->
+        <action
+            android:id="@+id/action_homeFragment_to_transferFragment"
+            app:destination="@id/navigation_transferFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_paymentMethodFragment"
+            app:destination="@id/navigation_paymentMethodFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_transferFragment"
+        android:name="com.example.payapp.TransferFragment"
+        android:label="@string/label_transfer"
+        tools:layout="@layout/fragment_transfer" >
+        <action
+            android:id="@+id/action_transferFragment_to_homeFragment"
+            app:destination="@id/navigation_homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_paymentMethodFragment"
+        android:name="com.example.payapp.PaymentMethodFragment"
+        android:label="fragment_payment_method"
+        tools:layout="@layout/fragment_payment_method" >
+        <action
+            android:id="@+id/action_paymentMethodFragment_to_homeFragment"
+            app:destination="@id/navigation_homeFragment" />
+    </fragment>
+</navigation>

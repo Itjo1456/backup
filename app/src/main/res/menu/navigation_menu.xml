@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <item android:id="@+id/navigation_homeFragment"
+      android:title ="@string/label_home"
+      android:icon="@drawable/ic_home"/>
+
+  <item android:id="@+id/navigation_transferFragment"
+      android:title="@string/label_transfer"
+      android:icon="@drawable/ic_transfer"/>
+</menu>
