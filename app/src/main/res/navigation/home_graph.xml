@@ -35,5 +35,23 @@
         <action
             android:id="@+id/action_paymentMethodFragment_to_homeFragment"
             app:destination="@id/navigation_homeFragment" />
+        <action
+            android:id="@+id/action_navigation_paymentMethodFragment_to_navigation_payment_registration"
+            app:destination="@id/navigation_payment_registration" />
     </fragment>
+    <fragment
+        android:id="@+id/navigation_payment_registration"
+        android:name="com.example.payapp.PaymentRegisterFragment"
+        android:label="fragment_payment_register"
+        tools:layout="@layout/fragment_payment_register" >
+        <argument
+            android:name="paymentMethod"
+            app:argType="com.example.payapp.PaymentMethod" />
+        <action
+            android:id="@+id/action_navigation_payment_registration_to_navigation_homeFragment"
+            app:destination="@id/navigation_homeFragment" />
+    </fragment>
+    <argument android:name="paymentMethod" />
 </navigation>
+
+<!-- 메뉴 아이콘 아이디랑 네비게이션 아이디는 동일해야함-->

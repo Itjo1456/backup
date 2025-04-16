@@ -1,7 +1,10 @@
 package com.example.payapp
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.NavController
+import androidx.navigation.NavDestination
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
@@ -30,6 +33,18 @@ class HomeActivity : AppCompatActivity() {
             supportFragmentManager.findFragmentById(R.id.container_home) as NavHostFragment
         val navController = navHostFragment.navController
         binding.bottomNavigationHome.setupWithNavController(navController)
+
+        //네비게이션을 숨겨야하는 경우에 추가하는 코드(특정 페이지에서 네비게이션을 숨길 때)
+        navController.addOnDestinationChangedListener { controller, destination, arguments ->
+            when(destination.id){
+                R.id.navigation_homeFragment, R.id.navigation_transferFragment ->{
+                    binding.bottomNavigationHome.visibility = View.VISIBLE
+                }
+                else ->{
+                    binding.bottomNavigationHome.visibility = View.GONE
+                }
+            }
+        }
     }
 
 }

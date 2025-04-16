@@ -1,7 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    id("androidx.navigation.safeargs.kotlin")
+    id("androidx.navigation.safeargs.kotlin") // safeargs 라이브러리 설정
+    id("kotlin-parcelize") // parecilize 라이브러리 설정
 }
 
 android {
